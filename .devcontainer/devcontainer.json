@@ -1,0 +1,26 @@
+{
+  "name": "Flutter Development Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/dart:1": {
+      "version": "stable",
+      "flutter": "true"
+    }
+  },
+  "extensions": [
+    "Dart-Code.flutter",
+    "Dart-Code.dart-code",
+    "nash.awesome-flutter-snippets"
+  ],
+  "postCreateCommand": "flutter doctor",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "dart.flutterSdkPath": "/usr/local/flutter",
+        "editor.formatOnSave": true,
+        "editor.rulers": [80],
+        "editor.wordWrapColumn": 80
+      }
+    }
+  }
+}
